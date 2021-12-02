@@ -101,7 +101,7 @@ class Art(models.Model):
     description = models.TextField(verbose_name=_("description"), null=True)
     editor_name = models.CharField(max_length=100, verbose_name=_("editor name"), null=True)
     name = models.CharField(max_length=100, verbose_name=_("name"))
-    img = models.ImageField()
+    img = models.ImageField(null=True)
 
     def __str__(self):
         return self.name
