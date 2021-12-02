@@ -21,109 +21,109 @@ msgstr ""
 #: .\base_app\models.py:7 .\base_app\models.py:13 .\base_app\models.py:20
 #: .\base_app\models.py:26 .\base_app\models.py:36
 msgid "has been published"
-msgstr ""
+msgstr "a été publié"
 
 #: .\base_app\models.py:8 .\base_app\models.py:14 .\base_app\models.py:21
 #: .\base_app\models.py:27 .\base_app\models.py:51 .\base_app\models.py:76
 msgid "name"
-msgstr ""
+msgstr "nom"
 
 #: .\base_app\models.py:9
 msgid "id_plate"
-msgstr ""
+msgstr "plaque_d'identification"
 
 #: .\base_app\models.py:15
 msgid "id plate"
-msgstr ""
+msgstr "plaque d'identification"
 
 #: .\base_app\models.py:16
 msgid "start date"
-msgstr ""
+msgstr "date de départ"
 
 #: .\base_app\models.py:22 .\base_app\models.py:29 .\base_app\models.py:42
 #: .\base_app\models.py:52 .\base_app\models.py:74
 msgid "description"
-msgstr ""
+msgstr "description"
 
 #: .\base_app\models.py:28
 msgid "surname"
-msgstr ""
+msgstr "nom de famille"
 
 #: .\base_app\models.py:30
 msgid "medals of honor"
-msgstr ""
+msgstr "médaille d'honeur"
 
 #: .\base_app\models.py:31
 msgid "birth date"
-msgstr ""
+msgstr "date de naissance"
 
 #: .\base_app\models.py:32
 msgid "death date"
-msgstr ""
+msgstr "date de décès"
 
 #: .\base_app\models.py:37
 msgid "rescue boats"
-msgstr ""
+msgstr "bateaux de secour"
 
 #: .\base_app\models.py:38
 msgid "rescued boats"
-msgstr ""
+msgstr "bateaux secourus"
 
 #: .\base_app\models.py:39 .\base_app\models.py:55
 msgid "rescuers"
-msgstr ""
+msgstr "secoureurs"
 
 #: .\base_app\models.py:40
 msgid "rescue date"
-msgstr ""
+msgstr "date de sauvetage"
 
 #: .\base_app\models.py:41
 msgid "number of saved people"
-msgstr ""
+msgstr "nombre de personnes sauvées"
 
 #: .\base_app\models.py:53
 msgid "latitude"
-msgstr ""
+msgstr "latitude"
 
 #: .\base_app\models.py:54
 msgid "longitude"
-msgstr ""
+msgstr "longitude"
 
 #: .\base_app\models.py:59
 msgid "quote content"
-msgstr ""
+msgstr "citations"
 
 #: .\base_app\models.py:60
 msgid "rescue"
-msgstr ""
+msgstr "sauvetage"
 
 #: .\base_app\models.py:61
 msgid "rescuer"
-msgstr ""
+msgstr "sauveteurs"
 
 #: .\base_app\models.py:64
 msgid "book"
-msgstr ""
+msgstr "bibliographie"
 
 #: .\base_app\models.py:65
 msgid "boat"
-msgstr ""
+msgstr "bateau"
 
 #: .\base_app\models.py:66
 msgid "painting"
-msgstr ""
+msgstr "peinture"
 
 #: .\base_app\models.py:72
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: .\base_app\models.py:73
 msgid "creation date"
-msgstr ""
+msgstr "date de création"
 
 #: .\base_app\models.py:75
 msgid "editor name"
-msgstr ""
+msgstr "éditeur"
 
 #: .\base_app\templates\index.html:11
 msgid "translation test, translate this"
@@ -131,7 +131,7 @@ msgstr "test de traduction, traduis ceci"
 
 #: .\base_app\templates\index.html:12
 msgid "try"
-msgstr ""
+msgstr "essai"
 
 #: .\nuit_info\settings.py:134
 msgid "English"
@@ -155,7 +155,7 @@ msgstr "Japonais"
 
 #: .\templates\navbar.html:23
 msgid "Action"
-msgstr ""
+msgstr "action"
 
 #~ msgid "Espagnol"
 #~ msgstr "Espagnol"
