@@ -24,9 +24,3 @@ urlpatterns = [
     path('', include('base_app.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
-
-# translated urls
-urlpatterns += i18n_patterns(
-    path('', include('base_app.urls')),
-    path('admin/', admin.site.urls)
-)
