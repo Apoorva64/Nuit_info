@@ -26,6 +26,8 @@ class MedalOfHonor(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
     name = models.CharField(max_length=100, verbose_name=_("name"))
     description = models.TextField(max_length=1000, verbose_name=_("description"), null=True)
+    img = models.ImageField(null=True)
+
 
     def __str__(self):
         return self.name
