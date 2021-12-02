@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from base_app import models
 
@@ -15,3 +16,8 @@ class MedalOfHonorDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+
+class MedalOfHonorListView(ListView):
+    model = models.MedalOfHonor
+    template_name = 'medal_of_honor_list.html'

@@ -2,5 +2,5 @@
 {% block content %}
     <h1>Title: {{ object.name }}</h1>
     <p><strong>Description: </strong>{{ object.description }}</p>
-    {{ object.img }}
+    <img src="/media/{{ object.img }}" alt="">
 {% endblock %}
