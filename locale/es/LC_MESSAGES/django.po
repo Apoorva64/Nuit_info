@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-02 11:33+0100\n"
+"POT-Creation-Date: 2021-12-02 12:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,13 +22,17 @@ msgstr ""
 msgid "translation test, translate this"
 msgstr "prueba de traducción, traduce esto"
 
+#: .\base_app\templates\index.html:9
+msgid "try"
+msgstr "tratar"
+
 #: .\nuit_info\settings.py:134
 msgid "English"
 msgstr "inglés"
 
 #: .\nuit_info\settings.py:135
-msgid "Espagnol"
-msgstr "espanol"
+msgid "Spanish"
+msgstr "Español"
 
 #: .\nuit_info\settings.py:136
 msgid "French"
@@ -37,3 +41,14 @@ msgstr "frencés"
 #: .\nuit_info\settings.py:137
 msgid "German"
 msgstr "alemán"
+
+#: .\nuit_info\settings.py:138
+msgid "Japanese"
+msgstr ""
+
+#: .\templates\navbar.html:23
+msgid "Action"
+msgstr "Acción"
+
+#~ msgid "Espagnol"
+#~ msgstr "espanol"
