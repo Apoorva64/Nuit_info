@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% block header %}
+    <script src={% static "js/traduction_listener.js" %}></script>
+{% endblock %}
 
 {% block content %}
     <div class="container">
