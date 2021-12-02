@@ -132,7 +132,7 @@ STATICFILES_FINDERS = (
 # adding languages
 LANGUAGES = [
     ('en', _('English')),
-    ('es', _('Espagnol')),
+    ('es', _('Spanish')),
     ('fr', _('French')),
     ('de', _('German')),
 
