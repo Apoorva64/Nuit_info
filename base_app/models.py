@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 class RescuedBoat(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
     name = models.CharField(max_length=100, verbose_name=_("name"))
-    id_plate = models.CharField(max_length=100, verbose_name=_('id_plate'))
+    id_plate = models.CharField(max_length=100, verbose_name=_('id_plate'), null=True)
 
     def __str__(self):
         return self.name
@@ -15,7 +15,7 @@ class RescuedBoat(models.Model):
 class RescueBoat(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
     name = models.CharField(max_length=100, verbose_name=_("name"))
-    id_plate = models.CharField(max_length=100, verbose_name=_('id plate'))
+    id_plate = models.CharField(max_length=100, verbose_name=_('id plate'), null=True)
     start_date = models.DateTimeField(verbose_name=_('start date'))
 
     def __str__(self):
@@ -33,21 +33,21 @@ class MedalOfHonor(models.Model):
 
 class Rescuer(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
-    name = models.CharField(max_length=100, verbose_name=_("name"))
-    surname = models.CharField(max_length=100, verbose_name=_("surname"))
+    first_name = models.CharField(max_length=100, verbose_name=_("first name"))
+    last_name = models.CharField(max_length=100, verbose_name=_("last name"))
     description = models.TextField(max_length=1000, verbose_name=_("description"))
-    medals = models.ManyToManyField(MedalOfHonor, verbose_name=_("medals of honor"))
+    medals = models.ManyToManyField(MedalOfHonor, verbose_name=_("medals of honor"), null=True)
     birth_date = models.DateTimeField(verbose_name=_("birth date"))
-    death_date = models.DateTimeField(verbose_name=_("death date"))
+    death_date = models.DateTimeField(verbose_name=_("death date"), null=True)
 
     def __str__(self):
-        return self.name
+        return self.first_name + " " + self.last_name
 
 
 class Rescue(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
     rescue_boats = models.ManyToManyField(RescueBoat, verbose_name=_("rescue boats"))
-    rescued_boats = models.ManyToManyField(RescuedBoat, verbose_name=_("rescued boats"))
+    rescued_boats = models.ManyToManyField(RescuedBoat, verbose_name=_("rescued boats"), null=True)
     rescuers = models.ManyToManyField(Rescuer, verbose_name=_('rescuers'))
     rescue_date = models.DateTimeField(verbose_name=_("rescue date"))
     number_of_saved_people = models.IntegerField(verbose_name=_("number of saved people"))
@@ -70,7 +70,7 @@ class RescueStation(models.Model):
     description = models.TextField(verbose_name=_("description"))
     latitude = models.FloatField(verbose_name=_("latitude"))
     longitude = models.FloatField(verbose_name=_("longitude"))
-    rescuers = models.ManyToManyField(Rescuer, verbose_name=_("rescuers"))
+    rescuers = models.ManyToManyField(Rescuer, verbose_name=_("rescuers"), null=True)
 
     def __str__(self):
         return self.name
@@ -82,7 +82,7 @@ class Quote(models.Model):
     rescuer = models.ForeignKey(Rescuer, verbose_name=_("rescuer"), on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.rescuer.name
+        return self.rescuer.first_name + " " + self.rescuer.last_name
 
 
 ART_TYPE_CHOICES = (("book", _("book")),
