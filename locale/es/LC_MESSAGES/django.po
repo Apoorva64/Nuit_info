@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-02 19:04+0100\n"
+"POT-Creation-Date: 2021-12-02 21:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\base_app\models.py:7 .\base_app\models.py:13 .\base_app\models.py:20
-#: .\base_app\models.py:26 .\base_app\models.py:36
+
+#: .\base_app\models.py:7 .\base_app\models.py:16 .\base_app\models.py:26
+#: .\base_app\models.py:35 .\base_app\models.py:48 .\base_app\models.py:69
+#: .\base_app\models.py:81 .\base_app\models.py:97
 msgid "has been published"
 msgstr "ha sido publicado"
 
-#: .\base_app\models.py:8 .\base_app\models.py:14 .\base_app\models.py:21
-#: .\base_app\models.py:27 .\base_app\models.py:51 .\base_app\models.py:76
+#: .\base_app\models.py:8 .\base_app\models.py:17 .\base_app\models.py:27
+#: .\base_app\models.py:70 .\base_app\models.py:103
 msgid "name"
 msgstr "nombre"
 
@@ -31,105 +33,112 @@ msgstr "nombre"
 msgid "id_plate"
 msgstr "placa_de_identificación"
 
-#: .\base_app\models.py:15
+#: .\base_app\models.py:18
 msgid "id plate"
 msgstr "placa de identificación"
 
-#: .\base_app\models.py:16
+#: .\base_app\models.py:19
 msgid "start date"
 msgstr "fecha de inicio"
 
-#: .\base_app\models.py:22 .\base_app\models.py:29 .\base_app\models.py:42
-#: .\base_app\models.py:52 .\base_app\models.py:74
+#: .\base_app\models.py:28 .\base_app\models.py:38 .\base_app\models.py:54
+#: .\base_app\models.py:71 .\base_app\models.py:101
 msgid "description"
 msgstr "descripción"
 
-#: .\base_app\models.py:28
-msgid "surname"
+#: .\base_app\models.py:36
+#, fuzzy
+#| msgid "editor name"
+msgid "first name"
+msgstr "Nombre del editor"
+
+#: .\base_app\models.py:37
+#, fuzzy
+#| msgid "surname"
+msgid "last name"
 msgstr "apellido"
 
-#: .\base_app\models.py:30
+#: .\base_app\models.py:39
 msgid "medals of honor"
 msgstr "medallas de honor"
 
-#: .\base_app\models.py:31
+#: .\base_app\models.py:40
 msgid "birth date"
 msgstr "fecha de nacimiento"
 
-#: .\base_app\models.py:32
+#: .\base_app\models.py:41
 msgid "death date"
 msgstr "fecha de la muerte"
 
-#: .\base_app\models.py:37
+#: .\base_app\models.py:49
 msgid "rescue boats"
 msgstr ""
 
-#: .\base_app\models.py:38
+#: .\base_app\models.py:50
 msgid "rescued boats"
 msgstr "botes de rescate"
 
-#: .\base_app\models.py:39 .\base_app\models.py:55
+#: .\base_app\models.py:51 .\base_app\models.py:74
 msgid "rescuers"
 msgstr "rescatadores"
 
-#: .\base_app\models.py:40
+#: .\base_app\models.py:52
 msgid "rescue date"
 msgstr "fecha de rescate"
 
-#: .\base_app\models.py:41
+#: .\base_app\models.py:53
 msgid "number of saved people"
 msgstr "número de personas salvadas"
 
-#: .\base_app\models.py:53
+#: .\base_app\models.py:72
 msgid "latitude"
 msgstr "latitud"
 
-#: .\base_app\models.py:54
+#: .\base_app\models.py:73
 msgid "longitude"
 msgstr "longitud"
 
-#: .\base_app\models.py:59
+#: .\base_app\models.py:82
 msgid "quote content"
 msgstr "citar contenido"
 
-#: .\base_app\models.py:60
+#: .\base_app\models.py:83
 msgid "rescue"
 msgstr "rescate"
 
-#: .\base_app\models.py:61
+#: .\base_app\models.py:84
 msgid "rescuer"
 msgstr "salvador"
 
-#: .\base_app\models.py:64
+#: .\base_app\models.py:90
 msgid "book"
 msgstr "libro"
 
-#: .\base_app\models.py:65
+#: .\base_app\models.py:91
 msgid "boat"
 msgstr "barco"
 
-#: .\base_app\models.py:66
+#: .\base_app\models.py:92
 msgid "painting"
 msgstr "cuadro"
 
-#: .\base_app\models.py:72
+#: .\base_app\models.py:99
 msgid "type"
 msgstr "escribe"
 
-#: .\base_app\models.py:73
+#: .\base_app\models.py:100
 msgid "creation date"
 msgstr "fecha de creación"
 
-#: .\base_app\models.py:75
+#: .\base_app\models.py:102
 msgid "editor name"
 msgstr "Nombre del editor"
 
-
-#: .\base_app\templates\index.html:11
+#: .\base_app\templates\index.html:12
 msgid "translation test, translate this"
 msgstr "prueba de traducción, traduce esto"
 
-#: .\base_app\templates\index.html:12
+#: .\base_app\templates\index.html:13
 msgid "try"
 msgstr "tratar"
 

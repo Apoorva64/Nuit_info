@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 
 class RescuedBoat(models.Model):
@@ -26,8 +27,7 @@ class MedalOfHonor(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
     name = models.CharField(max_length=100, verbose_name=_("name"))
     description = models.TextField(max_length=1000, verbose_name=_("description"), null=True)
-    img = models.ImageField(null=True)
-
+    img = models.ImageField(upload_to="medal_of_honor/images", null=True)
 
     def __str__(self):
         return self.name
@@ -103,7 +103,7 @@ class Art(models.Model):
     description = models.TextField(verbose_name=_("description"), null=True)
     editor_name = models.CharField(max_length=100, verbose_name=_("editor name"), null=True)
     name = models.CharField(max_length=100, verbose_name=_("name"))
-    img = models.ImageField(null=True)
+    img = models.ImageField(null=True,upload_to="art/images")
 
     def __str__(self):
         return self.name

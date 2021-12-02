@@ -142,3 +142,8 @@ LOCALE_PATHS = (
     BASE_DIR / 'locale/',
 )
 AUTH_USER_MODEL = 'base_app.User'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = BASE_DIR / 'full_static/'

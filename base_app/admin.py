@@ -20,11 +20,11 @@ class MedalOfHonorAdmin(admin.ModelAdmin):
 
 
 class RescuerAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name']
+    list_display = ['first_name', 'last_name', 'has_been_published']
 
 
 class RescueAdmin(admin.ModelAdmin):
-    list_display = ['rescue_date', 'number_of_saved_people']
+    list_display = ['rescue_date', 'number_of_saved_people', 'has_been_published']
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -35,13 +35,25 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ("username__startswith", "email__startswith")
 
 
+class RescueStationAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description', 'has_been_published']
+
+
+class ArtAdmin(admin.ModelAdmin):
+    list_display = ['author', 'type', 'creation_date', 'editor_name', 'name', 'description', 'has_been_published']
+
+
+class QuoteAdmin(admin.ModelAdmin):
+    list_display = ['content', 'rescue', 'rescuer', 'has_been_published']
+
+
 admin.site.register(models.RescuedBoat, RescuedBoatAdmin)
 admin.site.register(models.RescueBoat, RescueBoatAdmin)
 admin.site.register(models.MedalOfHonor, MedalOfHonorAdmin)
 
-admin.site.register(models.Rescue)
-admin.site.register(models.Rescuer)
-admin.site.register(models.RescueStation)
-admin.site.register(models.Art)
-admin.site.register(models.Quote)
+admin.site.register(models.Rescue, RescueAdmin)
+admin.site.register(models.Rescuer, RescuerAdmin)
+admin.site.register(models.RescueStation, RescueStationAdmin)
+admin.site.register(models.Art, ArtAdmin)
+admin.site.register(models.Quote, QuoteAdmin)
 admin.site.register(models.User, UserAdmin)
