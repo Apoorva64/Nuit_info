@@ -141,3 +141,4 @@ LANGUAGES = [
 LOCALE_PATHS = (
     BASE_DIR / 'locale/',
 )
+AUTH_USER_MODEL = 'base_app.User'

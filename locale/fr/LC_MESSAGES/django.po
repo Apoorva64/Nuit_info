@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-02 12:38+0100\n"
+"POT-Creation-Date: 2021-12-02 19:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\base_app\templates\index.html:8
+#: .\base_app\models.py:7 .\base_app\models.py:13 .\base_app\models.py:20
+#: .\base_app\models.py:26 .\base_app\models.py:36
+msgid "has been published"
+msgstr ""
+
+#: .\base_app\models.py:8 .\base_app\models.py:14 .\base_app\models.py:21
+#: .\base_app\models.py:27 .\base_app\models.py:51 .\base_app\models.py:76
+msgid "name"
+msgstr ""
+
+#: .\base_app\models.py:9
+msgid "id_plate"
+msgstr ""
+
+#: .\base_app\models.py:15
+msgid "id plate"
+msgstr ""
+
+#: .\base_app\models.py:16
+msgid "start date"
+msgstr ""
+
+#: .\base_app\models.py:22 .\base_app\models.py:29 .\base_app\models.py:42
+#: .\base_app\models.py:52 .\base_app\models.py:74
+msgid "description"
+msgstr ""
+
+#: .\base_app\models.py:28
+msgid "surname"
+msgstr ""
+
+#: .\base_app\models.py:30
+msgid "medals of honor"
+msgstr ""
+
+#: .\base_app\models.py:31
+msgid "birth date"
+msgstr ""
+
+#: .\base_app\models.py:32
+msgid "death date"
+msgstr ""
+
+#: .\base_app\models.py:37
+msgid "rescue boats"
+msgstr ""
+
+#: .\base_app\models.py:38
+msgid "rescued boats"
+msgstr ""
+
+#: .\base_app\models.py:39 .\base_app\models.py:55
+msgid "rescuers"
+msgstr ""
+
+#: .\base_app\models.py:40
+msgid "rescue date"
+msgstr ""
+
+#: .\base_app\models.py:41
+msgid "number of saved people"
+msgstr ""
+
+#: .\base_app\models.py:53
+msgid "latitude"
+msgstr ""
+
+#: .\base_app\models.py:54
+msgid "longitude"
+msgstr ""
+
+#: .\base_app\models.py:59
+msgid "quote content"
+msgstr ""
+
+#: .\base_app\models.py:60
+msgid "rescue"
+msgstr ""
+
+#: .\base_app\models.py:61
+msgid "rescuer"
+msgstr ""
+
+#: .\base_app\models.py:64
+msgid "book"
+msgstr ""
+
+#: .\base_app\models.py:65
+msgid "boat"
+msgstr ""
+
+#: .\base_app\models.py:66
+msgid "painting"
+msgstr ""
+
+#: .\base_app\models.py:72
+msgid "type"
+msgstr ""
+
+#: .\base_app\models.py:73
+msgid "creation date"
+msgstr ""
+
+#: .\base_app\models.py:75
+msgid "editor name"
+msgstr ""
+
+#: .\base_app\templates\index.html:11
 msgid "translation test, translate this"
 msgstr "test de traduction, traduis ceci"
 
-#: .\base_app\templates\index.html:9
+#: .\base_app\templates\index.html:12
 msgid "try"
 msgstr ""
 
