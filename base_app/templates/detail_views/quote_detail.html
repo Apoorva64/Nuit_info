@@ -9,3 +9,14 @@
         <p class="fs-2 text"><em><a href="{{ object.rescue.get_absolute_url }}">{{ object.rescuer }}</a></em></p>
     </div>
 {% endblock %}
+{% extends "base.html" %}
+{% block title %}
+    Quote
+{% endblock %}
+{% block content %}
+    <div class="position-absolute top-50 start-50 translate-middle badge text-secondary">
+        <p class="fs-2 text"><em><a href="{{ object.rescue.get_absolute_url }}">{{ object.rescue }}</a></em></p>
+        <p class="fs-2 text"><em><a href="{{ object.rescue.get_absolute_url }}">{{ object.content }}</a></em></p>
+        <p class="fs-2 text"><em><a href="{{ object.rescue.get_absolute_url }}">{{ object.rescuer }}</a></em></p>
+    </div>
+{% endblock %}

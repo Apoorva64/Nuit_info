@@ -2,6 +2,12 @@
 {% load static %}
 {% load i18n %}
 {% block header %}
+    <script>
+    let l1="{% trans 'Sauvetages' %}";
+    let l2="{% trans 'Sauveteurs' %}";
+    let l3="{% trans 'Bateaux' %}";
+    let l4="{% trans 'Compléments' %}";
+    </script>
     <script src={% static "js/traduction_listener.js" %}></script>
     <script src={% static "js/game_easteregg.js" %} defer></script>
     <link rel="stylesheet" type="text/css" href={% static "css/navbar.css" %}>
