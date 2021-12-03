@@ -2,29 +2,30 @@
 
 {% block content %}
     <table class="table table-success  table-striped">
-    <thead>
-    <tr>
-      <th>Quote</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% if object_list %}
-    <tr>
-        {% for quote in object_list %}
-            <td>
-            <a class="text-decoration-none "href="{% url 'base_app:quote_detail' pk=quote.pk  %} ">{{ quote.rescuer }}</a>
-            </td>
-           <td>
-               {{ quote.content }}
-           </td>
-            <td>
-               {{ quote.rescue }}
-           </td>
-        {% endfor %}
-    </tr>
-   {% else %}
-        <p>There are no rescue boat in the library.</p>
-    {% endif %}
-  </tbody>
+        <thead>
+        <tr>
+            <th>Quote</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if object_list %}
+            <tr>
+                {% for quote in object_list %}
+                    <td>
+                        <a class="text-decoration-none "
+                           href="{% url 'base_app:quote_detail' pk=quote.pk %} ">{{ quote.rescuer }}</a>
+                    </td>
+                    <td>
+                        {{ quote.content }}
+                    </td>
+                    <td>
+                        {{ quote.rescue }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% else %}
+            <p>There are no rescue boat in the library.</p>
+        {% endif %}
+        </tbody>
     </table>
 {% endblock %}
