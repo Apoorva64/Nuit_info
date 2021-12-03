@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div style="text-align: center;">
+    <div style="text-align: center">
         {% if search %}
             <h1>You Searched for {{ search }}</h1>
+            <table class="table table-striped" >
+                {% for result_cat in results %}
 
-            {% for result_cat in results %}
-                {% for result in result_cat %}
-                    <a href="{{ result.get_absolute_url }}">{{ result }}</a>
-                    {% if result.description %}
-                        : {{ result.description }}
-                    {% endif %}
+                        {% for result in result_cat %}
+                            <p>
+                                <a href="{{ result.get_absolute_url }}">{{ result |truncatewords:5 }}</a>
+                                {% if result.description %}
+                                    : {{ result.description|truncatewords:5 }}
+                                {% endif %}
+                            </p>
+                        {% endfor %}
 
                 {% endfor %}
-
-            {% endfor %}
-
+            </table>
         {% else %}
             <h1>You are not supposed to be here</h1>
         {% endif %}

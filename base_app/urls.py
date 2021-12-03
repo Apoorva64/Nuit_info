@@ -28,8 +28,8 @@ urlpatterns = [path('', views.index_view, name='index'),
                path('rescue_detail/<int:pk>/', views.RescueDetailView.as_view(), name="rescue_detail"),
                path('rescue_list/', views.RescueListView.as_view(), name="rescue_list"),
 
-               path('art_detail/<int:pk>/', views.ArtDetailView.as_view(), name="rescue_detail"),
-               path('art_list/<int:pk>/', views.ArtListView.as_view(), name="rescue_list"),
+               path('art_detail/<int:pk>/', views.ArtDetailView.as_view(), name="art_detail"),
+               path('art_list/<int:pk>/', views.ArtListView.as_view(), name="art_list"),
 
                path('quote_detail/<int:pk>/', views.QuoteDetailView.as_view(), name="quote_detail"),
                path('quote_list/<int:pk>/', views.QuoteListView.as_view(), name="quote_list"),
