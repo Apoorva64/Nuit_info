@@ -107,6 +107,9 @@ class Quote(models.Model):
     def __str__(self):
         return self.rescuer.first_name + " " + self.rescuer.last_name
 
+    def get_absolute_url(self):
+        return reverse('base_app:quote_detail', args=[str(self.id)])
+
 
 ART_TYPE_CHOICES = (("book", _("book")),
                     ("boat", _("boat")),
@@ -126,3 +129,6 @@ class Art(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('base_app:art_detail', args=[str(self.id)])

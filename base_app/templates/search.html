@@ -8,6 +8,9 @@
             {% for result_cat in results %}
                 {% for result in result_cat %}
                     <a href="{{ result.get_absolute_url }}">{{ result }}</a>
+                    {% if result.description %}
+                        : {{ result.description }}
+                    {% endif %}
 
                 {% endfor %}
 

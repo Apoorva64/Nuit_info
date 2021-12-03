@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from django.views.generic.detail import DetailView
 from base_app import models
 from django.db.models import CharField
@@ -85,9 +85,20 @@ class RescueDetailView(DetailView):
     model = models.Rescue
     template_name = 'detail_views/rescue_detail.html'
 
+
 class RescueListView(ListView):
     model = models.Rescue
     template_name = 'list_views/rescue_list.html'
+
+
+class ArtDetailView(DetailView):
+    model = models.Art
+    template_name = 'detail_views/art_detail.html'
+
+
+class ArtListView(ListView):
+    model = models.Art
+    template_name = 'list_views/art_list.html'
 
 
 def search_page(request):
@@ -100,6 +111,7 @@ def search_page(request):
         medal_of_honor_result = models.MedalOfHonor.objects.filter(name__contains=string)
         rescuer_result = models.Rescuer.objects.filter(last_name__contains=string)
         rescue_station_result = models.RescueStation.objects.filter(name__contains=string)
+        art_result = models.Art.objects.filter(name__contains=string)
 
         # rescue_boat_result = models.RescueBoat.objects.annotate(search=SearchVector('name', 'id_plate')).filter(
         #     search=string)
@@ -118,6 +130,23 @@ def search_page(request):
         return render(request, 'search.html', {'search': string,
                                                'results': [rescue_result, rescuer_result, rescue_boat_result,
                                                            rescued_boat_result, medal_of_honor_result,
-                                                           rescue_station_result]})
+                                                           rescue_station_result, art_result]})
     else:
         return render(request, 'search.html', {})
+
+
+class QuoteDetailView(DetailView):
+    model = models.Quote
+    template_name = 'detail_views/quote_detail.html'
+
+
+class QuoteListView(ListView):
+    model = models.Quote
+    template_name = 'list_views/quote_list.html'
+
+
+class RescuerCreateView(CreateView):
+    model = models.Rescuer
+    template_name = 'create_views/rescuer.html'
+    fields = ('first_name','last_name','medals')
+
