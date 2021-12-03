@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="text-align: center;">
+        {% if search %}
+            <h1>You Searched for {{search}}</h1>
+
+            {% for result in results %}
+                {{ result }}
+            {% endfor %}
+
+        {% else %}
+            <h1>You are not supposed to be here</h1>
+        {% endif %}
+
+
+    </div>
+{% endblock %}

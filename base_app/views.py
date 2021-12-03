@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from base_app import models
+from django.db.models import CharField
+from django.db.models import Q
 
 
 # Create your views here.
@@ -78,3 +80,31 @@ class RescueStationListView(ListView):
     model = models.RescueStation
     template_name = 'list_views/rescue_station_list.html'
 
+
+def search_page(request):
+    if request.method == 'POST':
+        print(request.POST)
+        string = request.POST.get('search_query')
+        rescue_result = models.Rescue.objects.filter(description__contains=string)
+        rescue_boat_result = models.RescueBoat.objects.filter(name__contains=string)
+        rescued_boat_result = models.RescuedBoat.objects.filter(name__contains=string)
+        medal_of_honor_result = models.MedalOfHonor.objects.filter(name__contains=string)
+        rescuer_result = models.Rescuer.objects.filter(name__contains=string)
+
+        # rescue_boat_result = models.RescueBoat.objects.annotate(search=SearchVector('name', 'id_plate')).filter(
+        #     search=string)
+        # rescued_boat_result = models.RescuedBoat.objects.annotate(search=SearchVector('name', 'id_plate')).filter(
+        #     search=string)
+        #
+        # medal_of_honor_result = models.RescueBoat.objects.annotate(search=SearchVector('name', 'description')).filter(
+        #     search=string)
+        #
+        # rescuer_result = models.Rescuer.objects.annotate(
+        #     search=SearchVector('first_name', 'last_name', 'description', 'birth_date', 'death_date')).filter(
+        #     search=string)
+        # rescue_result = models.RescueBoat.objects.annotate(search=SearchVector('description')).filter(
+        #     search=string)
+
+        return render(request, 'search.html', {'search': string, 'results': rescue_result})
+    else:
+        return render(request, 'search.html', {})

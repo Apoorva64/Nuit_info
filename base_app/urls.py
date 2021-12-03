@@ -22,4 +22,6 @@ urlpatterns = [path('', views.index_view, name='index'),
                path('rescuer_detail/<int:pk>/', views.RescuerDetailView.as_view(),
                     name="rescuer_detail"),
                path('rescuer_list/', views.RescuerListView.as_view(), name="rescuer_list"),
+
+               path('search/', views.search_page, name="search")
                ]
