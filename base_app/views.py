@@ -148,5 +148,40 @@ class QuoteListView(ListView):
 class RescuerCreateView(CreateView):
     model = models.Rescuer
     template_name = 'create_views/rescuer.html'
-    fields = ('first_name','last_name','medals')
+    fields = ('first_name', 'last_name', 'medals', 'description', 'birth_date', 'death_date')
 
+
+class RescuedBoatCreateView(CreateView):
+    model = models.RescuedBoat
+    template_name = 'create_views/rescued_boat.html'
+    fields = ("name", "id_plate")
+
+
+class MedalOfHonorCreateView(CreateView):
+    model = models.MedalOfHonor
+    template_name = 'create_views/medal_of_honor.html'
+    fields = ("name", "description", "img")
+
+
+class RescueCreateView(CreateView):
+    model = models.Rescue
+    template_name = 'create_views/rescue.html'
+    fields = ("rescue_boats", "rescued_boats", "rescuers", "rescue_date", "number_of_saved_people", "description")
+
+
+class RescueStationCreateView(CreateView):
+    model = models.RescueStation
+    template_name = 'create_views/rescue_station.html'
+    fields = ("name", "rescuers", "description")
+
+
+class QuoteCreateView(CreateView):
+    model = models.Quote
+    template_name = 'create_views/quote.html'
+    fields = ("content", "rescue", "rescuer")
+
+
+class ArtCreateView(CreateView):
+    model = models.Art
+    template_name = 'create_views/art.html'
+    fields = ("author", "type", "creation_date", "description", "editor_name", "name", "img")
