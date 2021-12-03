@@ -27,7 +27,7 @@ class RescueBoat(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('base_app:rescue_boat_detail', args=[str(self.id)])
+        return reverse('base_app:rescued_boat_detail', args=[str(self.id)])
 
 
 class MedalOfHonor(models.Model):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 00:01+0100\n"
+"POT-Creation-Date: 2021-12-03 06:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,153 +18,195 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\base_app\models.py:8 .\base_app\models.py:17 .\base_app\models.py:27
-#: .\base_app\models.py:37 .\base_app\models.py:50 .\base_app\models.py:71
-#: .\base_app\models.py:83 .\base_app\models.py:99
+#: .\base_app\models.py:9 .\base_app\models.py:21 .\base_app\models.py:34
+#: .\base_app\models.py:47 .\base_app\models.py:63 .\base_app\models.py:87
+#: .\base_app\models.py:102 .\base_app\models.py:121
 msgid "has been published"
 msgstr "a été publié"
 
-#: .\base_app\models.py:9 .\base_app\models.py:18 .\base_app\models.py:28
-#: .\base_app\models.py:72 .\base_app\models.py:105
+#: .\base_app\models.py:10 .\base_app\models.py:22 .\base_app\models.py:35
+#: .\base_app\models.py:88 .\base_app\models.py:127
 msgid "name"
 msgstr "nom"
 
-#: .\base_app\models.py:10
+#: .\base_app\models.py:11
 msgid "id_plate"
 msgstr "plaque_d'identification"
 
-#: .\base_app\models.py:19
+#: .\base_app\models.py:23
 msgid "id plate"
 msgstr "plaque d'identification"
 
-#: .\base_app\models.py:20
+#: .\base_app\models.py:24
 msgid "start date"
 msgstr "date de départ"
 
-#: .\base_app\models.py:29 .\base_app\models.py:40 .\base_app\models.py:56
-#: .\base_app\models.py:73 .\base_app\models.py:103
+#: .\base_app\models.py:36 .\base_app\models.py:50 .\base_app\models.py:69
+#: .\base_app\models.py:89 .\base_app\models.py:125
 msgid "description"
 msgstr "description"
 
-#: .\base_app\models.py:38
+#: .\base_app\models.py:48
 #, fuzzy
 #| msgid "editor name"
 msgid "first name"
 msgstr "éditeur"
 
-#: .\base_app\models.py:39
+#: .\base_app\models.py:49
 #, fuzzy
 #| msgid "surname"
 msgid "last name"
 msgstr "nom de famille"
 
-#: .\base_app\models.py:41
+#: .\base_app\models.py:51
 msgid "medals of honor"
 msgstr "médaille d'honeur"
 
-#: .\base_app\models.py:42
+#: .\base_app\models.py:52
 msgid "birth date"
 msgstr "date de naissance"
 
-#: .\base_app\models.py:43
+#: .\base_app\models.py:53
 msgid "death date"
 msgstr "date de décès"
 
-#: .\base_app\models.py:51
+#: .\base_app\models.py:64
 msgid "rescue boats"
 msgstr "bateaux de secour"
 
-#: .\base_app\models.py:52
+#: .\base_app\models.py:65
 msgid "rescued boats"
 msgstr "bateaux secourus"
 
-#: .\base_app\models.py:53 .\base_app\models.py:76
+#: .\base_app\models.py:66 .\base_app\models.py:92
+#: .\base_app\templates\detail_views\rescue_detail.html:17
 msgid "rescuers"
 msgstr "secoureurs"
 
-#: .\base_app\models.py:54
+#: .\base_app\models.py:67
 msgid "rescue date"
 msgstr "date de sauvetage"
 
-#: .\base_app\models.py:55
+#: .\base_app\models.py:68
 msgid "number of saved people"
 msgstr "nombre de personnes sauvées"
 
-#: .\base_app\models.py:74
+#: .\base_app\models.py:90
 msgid "latitude"
 msgstr "latitude"
 
-#: .\base_app\models.py:75
+#: .\base_app\models.py:91
 msgid "longitude"
 msgstr "longitude"
 
-#: .\base_app\models.py:84
+#: .\base_app\models.py:103
 msgid "quote content"
 msgstr "citations"
 
-#: .\base_app\models.py:85
+#: .\base_app\models.py:104
 msgid "rescue"
 msgstr "sauvetage"
 
-#: .\base_app\models.py:86
+#: .\base_app\models.py:105
 msgid "rescuer"
 msgstr "sauveteurs"
 
-#: .\base_app\models.py:92
+#: .\base_app\models.py:114
 msgid "book"
 msgstr "bibliographie"
 
-#: .\base_app\models.py:93
+#: .\base_app\models.py:115
 msgid "boat"
 msgstr "bateau"
 
-#: .\base_app\models.py:94
+#: .\base_app\models.py:116
 msgid "painting"
 msgstr "peinture"
 
-#: .\base_app\models.py:101
+#: .\base_app\models.py:123
 msgid "type"
 msgstr "type"
 
-#: .\base_app\models.py:102
+#: .\base_app\models.py:124
 msgid "creation date"
 msgstr "date de création"
 
-#: .\base_app\models.py:104
+#: .\base_app\models.py:126
 msgid "editor name"
 msgstr "éditeur"
 
-#: .\base_app\templates\index.html:12
+#: .\base_app\templates\detail_views\medal_of_honor_detail.html:4
+#, fuzzy
+#| msgid "medals of honor"
+msgid "Medal of Honor"
+msgstr "médaille d'honeur"
+
+#: .\base_app\templates\detail_views\rescue_detail.html:4
+#, fuzzy
+#| msgid "rescue"
+msgid "Rescue"
+msgstr "sauvetage"
+
+#: .\base_app\templates\detail_views\rescue_detail.html:9
+#, fuzzy
+#| msgid "rescued boats"
+msgid "rescued_boats"
+msgstr "bateaux secourus"
+
+#: .\base_app\templates\detail_views\rescue_detail.html:13
+#, fuzzy
+#| msgid "rescue boats"
+msgid "rescue_boats"
+msgstr "bateaux de secour"
+
+#: .\base_app\templates\detail_views\rescue_station_detail.html:9
+#, fuzzy
+#| msgid "rescuers"
+msgid "Rescuers"
+msgstr "secoureurs"
+
+#: .\base_app\templates\index.html:15
 msgid "translation test, translate this"
 msgstr "test de traduction, traduis ceci"
 
-#: .\base_app\templates\index.html:13
+#: .\base_app\templates\index.html:16
 msgid "try"
 msgstr "essai"
 
-#: .\nuit_info\settings.py:134
+#: .\nuit_info\settings.py:135
 msgid "English"
 msgstr "Anglais"
 
-#: .\nuit_info\settings.py:135
+#: .\nuit_info\settings.py:136
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: .\nuit_info\settings.py:136
+#: .\nuit_info\settings.py:137
 msgid "French"
 msgstr "Français"
 
-#: .\nuit_info\settings.py:137
+#: .\nuit_info\settings.py:138
 msgid "German"
 msgstr "Allemand"
 
-#: .\nuit_info\settings.py:138
+#: .\nuit_info\settings.py:139
 msgid "Japanese"
 msgstr "Japonais"
 
-#: .\templates\navbar.html:23
-msgid "Action"
-msgstr "action"
+#: .\templates\navbar.html:4
+msgid "The math saviors"
+msgstr "Les sauveteurs des mathématiques"
+
+#: .\templates\navbar.html:13
+msgid "Home"
+msgstr "Accueil"
+
+#: .\templates\navbar.html:17 .\templates\navbar.html:19
+msgid "Search"
+msgstr "Recherche"
+
+#~ msgid "Action"
+#~ msgstr "action"
 
 #~ msgid "Espagnol"
 #~ msgstr "Espagnol"
