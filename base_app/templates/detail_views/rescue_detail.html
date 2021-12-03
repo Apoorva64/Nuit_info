@@ -5,20 +5,22 @@
 {% endblock %}
 {% block content %}
     <div class="position-absolute top-50 start-50 translate-middle badge text-secondary" style="width:30%">
-    <div class="align-middle fs-1"><h1><strong>{{ object.name }}</strong></h1></div>
+        <div class="align-middle fs-1"><h1><strong>{{ object.name }}</strong></h1></div>
         <p>{% trans "rescued_boats" %} :</p>
         {% for i in object.rescued_boats.all %}
-            <div>{{ i }}</div>
+            <p>{{ i }}</p>
         {% endfor %}
-    <p>{% trans "rescue_boats" %} :</p>
+        <p>{% trans "rescue_boats" %} :</p>
         {% for i in object.rescue_boats.all %}
-            <div>{{ i }}</div>
+            <p>{{ i.name }}</p>
         {% endfor %}
-    <p>{% trans "rescuers" %} :</p>
+        <p>{% trans "rescuers" %} :</p>
         {% for i in object.rescuers.all %}
-            <div>{{ i }}</div>
+            <p>{{ i.first_name }}</p>
         {% endfor %}
-        <p class="fs-2 text"><em>{{ object.description }}</em></p>
-        <div class="align-middle fs-1">{{ object.rescue_date }}</div>
+     <p>{% trans "description" %} :</p>
+        <p ><em>{{ object.description }}</em></p>
+     <p>{% trans "date" %} :</p>
+        <p>{{ object.rescue_date }}</p>
     </div>
 {% endblock %}

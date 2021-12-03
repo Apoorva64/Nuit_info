@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}
+    Quote
+{% endblock %}
+{% block content %}
+    <div class= "position-absolute top-50 start-50 translate-middle badge text-secondary" style="width:30%">
+      <p class="fs-2 text"><em>{{ object.rescue }}</em></p>
+    <p class="fs-2 text"><em>""{{ object.content }}""</em></p>
+    <p class="fs-2 text"><em>{{ object.rescuer }}</em></p>
+    </div>
+{% endblock %}
