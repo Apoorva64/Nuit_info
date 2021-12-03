@@ -1,17 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>medals</h1>
-    {% if object_list %}
-        <ul>
-            {% for medal_of_honor in object_list %}
-                <li>
-                    <a href="{% url 'base_app:medal_of_honor_detail' pk=medal_of_honor.pk  %} ">{{ medal_of_honor.name }}</a>
-                    ({{ medal_of_honor.description }})
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
+    <table class="table table-success  table-striped">
+    <thead>
+    <tr>
+      <th>Medals</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if object_list %}
+    <tr>
+        {% for medal_of_honor in object_list %}
+            <td>
+            <a class="text-decoration-none "href="{% url 'base_app:medal_of_honor_detail' pk=medal_of_honor.pk  %} ">{{ medal_of_honor.name }}</a>
+            </td>
+           <td>
+               {{ medal_of_honor.description }}
+           </td>
+        {% endfor %}
+    </tr>
+   {% else %}
         <p>There are no medals in the library.</p>
     {% endif %}
+  </tbody>
+    </table>
 {% endblock %}

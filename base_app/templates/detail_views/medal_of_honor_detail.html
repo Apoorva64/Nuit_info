@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}
+    Medal of Honor
 {% endblock %}
 {% block content %}
-    <h1>Title: {{ object.name }}</h1>
-    <p><strong>Description: </strong>{{ object.description }}</p>
-    <img src="/media/{{ object.img }}" alt="">
+    <div class= "position-absolute top-50 start-50 translate-middle badge text-secondary" style="width:30%">
+    <div class="align-middle fs-1"><h1><strong>{{ object.name }}</strong></h1></div>
+        <img class=" img-thumbnail bd-placeholder-img figure-img img-fluid rounded"  src="/media/{{ object.img }}" alt="">
+      <p class="fs-2 text"><em>{{ object.description }}</em></p>
+    </div>
 {% endblock %}
