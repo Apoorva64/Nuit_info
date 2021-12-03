@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-02 21:09+0100\n"
+"POT-Creation-Date: 2021-12-03 00:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,119 +17,119 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\base_app\models.py:7 .\base_app\models.py:16 .\base_app\models.py:26
-#: .\base_app\models.py:35 .\base_app\models.py:48 .\base_app\models.py:69
-#: .\base_app\models.py:81 .\base_app\models.py:97
+#: .\base_app\models.py:8 .\base_app\models.py:17 .\base_app\models.py:27
+#: .\base_app\models.py:37 .\base_app\models.py:50 .\base_app\models.py:71
+#: .\base_app\models.py:83 .\base_app\models.py:99
 msgid "has been published"
 msgstr "公開されました"
 
-#: .\base_app\models.py:8 .\base_app\models.py:17 .\base_app\models.py:27
-#: .\base_app\models.py:70 .\base_app\models.py:103
+#: .\base_app\models.py:9 .\base_app\models.py:18 .\base_app\models.py:28
+#: .\base_app\models.py:72 .\base_app\models.py:105
 msgid "name"
 msgstr "名前"
 
-#: .\base_app\models.py:9
+#: .\base_app\models.py:10
 msgid "id_plate"
 msgstr "IDプレート"
 
-#: .\base_app\models.py:18
+#: .\base_app\models.py:19
 msgid "id plate"
 msgstr "IDプレート"
 
-#: .\base_app\models.py:19
+#: .\base_app\models.py:20
 msgid "start date"
 msgstr "開始日"
 
-#: .\base_app\models.py:28 .\base_app\models.py:38 .\base_app\models.py:54
-#: .\base_app\models.py:71 .\base_app\models.py:101
+#: .\base_app\models.py:29 .\base_app\models.py:40 .\base_app\models.py:56
+#: .\base_app\models.py:73 .\base_app\models.py:103
 msgid "description"
 msgstr "説明"
 
-#: .\base_app\models.py:36
+#: .\base_app\models.py:38
 #, fuzzy
 #| msgid "editor name"
 msgid "first name"
 msgstr "作成日"
 
-#: .\base_app\models.py:37
+#: .\base_app\models.py:39
 #, fuzzy
 #| msgid "surname"
 msgid "last name"
 msgstr "姓"
 
-#: .\base_app\models.py:39
+#: .\base_app\models.py:41
 msgid "medals of honor"
 msgstr "名誉勲章"
 
-#: .\base_app\models.py:40
+#: .\base_app\models.py:42
 msgid "birth date"
 msgstr "誕生日"
 
-#: .\base_app\models.py:41
+#: .\base_app\models.py:43
 msgid "death date"
 msgstr "死亡日"
 
-#: .\base_app\models.py:49
+#: .\base_app\models.py:51
 msgid "rescue boats"
 msgstr "救助艇"
 
-#: .\base_app\models.py:50
+#: .\base_app\models.py:52
 msgid "rescued boats"
 msgstr "救助されたボート"
 
-#: .\base_app\models.py:51 .\base_app\models.py:74
+#: .\base_app\models.py:53 .\base_app\models.py:76
 msgid "rescuers"
 msgstr "救助者"
 
-#: .\base_app\models.py:52
+#: .\base_app\models.py:54
 msgid "rescue date"
 msgstr "救助日"
 
-#: .\base_app\models.py:53
+#: .\base_app\models.py:55
 msgid "number of saved people"
 msgstr "保存された人の数"
 
-#: .\base_app\models.py:72
+#: .\base_app\models.py:74
 msgid "latitude"
 msgstr "緯度"
 
-#: .\base_app\models.py:73
+#: .\base_app\models.py:75
 msgid "longitude"
 msgstr "経度"
 
-#: .\base_app\models.py:82
+#: .\base_app\models.py:84
 msgid "quote content"
 msgstr "引用内容"
 
-#: .\base_app\models.py:83
+#: .\base_app\models.py:85
 msgid "rescue"
 msgstr "救援"
 
-#: .\base_app\models.py:84
+#: .\base_app\models.py:86
 msgid "rescuer"
 msgstr "救援"
 
-#: .\base_app\models.py:90
+#: .\base_app\models.py:92
 msgid "book"
 msgstr "本"
 
-#: .\base_app\models.py:91
+#: .\base_app\models.py:93
 msgid "boat"
 msgstr "ボート"
 
-#: .\base_app\models.py:92
+#: .\base_app\models.py:94
 msgid "painting"
 msgstr "ペインティング"
 
-#: .\base_app\models.py:99
+#: .\base_app\models.py:101
 msgid "type"
 msgstr "タイプ"
 
-#: .\base_app\models.py:100
+#: .\base_app\models.py:102
 msgid "creation date"
 msgstr "作成日"
 
-#: .\base_app\models.py:102
+#: .\base_app\models.py:104
 msgid "editor name"
 msgstr "作成日"
 
