@@ -29,9 +29,9 @@
                     <td>
                         {{ rescuer.description }}
                     </td>
-                    <td>
-                        {{ rescuer.medals }}
-                    </td>
+                    <td>{% for r in rescue.medal_of_honor.all %}
+                {{ r.name }}
+            {% endfor %}</td>
                     <td>
                         {{ rescuer.birth_date }}
                     </td>
