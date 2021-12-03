@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-success  table-striped">
+    <thead>
+    <tr>
+      <th>Rescue Station</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if object_list %}
+    <tr>
+        {% for rescue_station in object_list %}
+            <td>
+            <a class="text-decoration-none "href="{% url 'base_app:rescue_station_detail' pk=rescue_station.pk  %} ">{{ rescue_station.name }}</a>
+            </td>
+           <td>
+               {{ rescue_station.description }}
+           </td>
+            <td>
+               {{ rescue_station.rescuers }}
+           </td>
+            <td>
+               {{ rescue_station.longitude }}
+           </td>
+            <td>
+               {{ rescue_station.latitude }}
+           </td>
+        {% endfor %}
+    </tr>
+   {% else %}
+        <p>There are no rescue station in the library.</p>
+    {% endif %}
+  </tbody>
+    </table>
+{% endblock %}

@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block title %}
-    {{ object.name }}
+    Rescued Boat
 {% endblock %}
 {% block content %}
     <div class= "position-absolute top-50 start-50 translate-middle badge text-secondary" style="width:30%">
-    <div class="align-middle fs-1"><h1><strong>{{ object.id_plate }}</strong></h1></div>
-      <p class="fs-2 text"><em>{{ object.has_been_published }}</em></p>
+      <p class="fs-2 text"><em>{{ object.name }}</em></p>
     </div>
 {% endblock %}
