@@ -1,7 +1,7 @@
 {% load i18n %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-sky text-black">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand contour" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'base_app:index' %}">Home</a>
+                    <a class="nav-link active contour" aria-current="page" href="{% url 'base_app:index' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link contour" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle contour" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
                     </a>
@@ -29,30 +29,27 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <form name="traduction_form" class="ms-1" action="{% url 'set_language' %}"
-                          method="post">{% csrf_token %}
-                        <input name="next" type="hidden" value="{{ redirect_to }}"/>
-                        <select onchange="onChangeLanguage()" name="language"
-                                class="form-select bg-dark text-white container pl-5">
-                            {% get_current_language as LANGUAGE_CODE %}
-                            {% get_available_languages as LANGUAGES %}
-                            {% get_language_info_list for LANGUAGES as languages %}
-                            {% for language in languages %}
-                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
-                                        selected="selected"{% endif %}>
-                                    {{ language.name_local }} ({{ language.code }})
-                                </option>
-                            {% endfor %}
-                        </select>
-                    </form>
+                    <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
-
-            <form class="d-flex me-2" method="POST" action="{% url 'base_app:search' %}">{% csrf_token %}
+        <form class="d-flex me-2" method="POST" action="{% url 'base_app:search' %}">{% csrf_token %}
                 <input class="form-control me-2" type="search" placeholder="Search" name="search_query" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-
+            <form name="traduction_form" class="" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}"/>
+                <select onchange="onChangeLanguage()" name="language" class="form-select bg-dark text-white container pl-5">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                selected="selected"{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
         </div>
 
     </div>
