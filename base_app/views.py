@@ -81,6 +81,15 @@ class RescueStationListView(ListView):
     template_name = 'list_views/rescue_station_list.html'
 
 
+class RescueDetailView(DetailView):
+    model = models.Rescue
+    template_name = 'detail_views/rescue_detail.html'
+
+class RescueListView(ListView):
+    model = models.Rescue
+    template_name = 'list_views/rescue_list.html'
+
+
 def search_page(request):
     if request.method == 'POST':
         print(request.POST)
@@ -89,7 +98,8 @@ def search_page(request):
         rescue_boat_result = models.RescueBoat.objects.filter(name__contains=string)
         rescued_boat_result = models.RescuedBoat.objects.filter(name__contains=string)
         medal_of_honor_result = models.MedalOfHonor.objects.filter(name__contains=string)
-        rescuer_result = models.Rescuer.objects.filter(name__contains=string)
+        rescuer_result = models.Rescuer.objects.filter(last_name__contains=string)
+        rescue_station_result = models.RescueStation.objects.filter(name__contains=string)
 
         # rescue_boat_result = models.RescueBoat.objects.annotate(search=SearchVector('name', 'id_plate')).filter(
         #     search=string)
@@ -105,6 +115,9 @@ def search_page(request):
         # rescue_result = models.RescueBoat.objects.annotate(search=SearchVector('description')).filter(
         #     search=string)
 
-        return render(request, 'search.html', {'search': string, 'results': rescue_result})
+        return render(request, 'search.html', {'search': string,
+                                               'results': [rescue_result, rescuer_result, rescue_boat_result,
+                                                           rescued_boat_result, medal_of_honor_result,
+                                                           rescue_station_result]})
     else:
         return render(request, 'search.html', {})

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
@@ -12,6 +13,9 @@ class RescuedBoat(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('base_app:rescued_boat_detail', args=[str(self.id)])
+
 
 class RescueBoat(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
@@ -22,6 +26,9 @@ class RescueBoat(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('base_app:rescue_boat_detail', args=[str(self.id)])
+
 
 class MedalOfHonor(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
@@ -31,6 +38,9 @@ class MedalOfHonor(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('base_app:medal_of_honor_detail', args=[str(self.id)])
 
 
 class Rescuer(models.Model):
@@ -45,6 +55,9 @@ class Rescuer(models.Model):
     def __str__(self):
         return self.first_name + " " + self.last_name
 
+    def get_absolute_url(self):
+        return reverse('base_app:rescuer_detail', args=[str(self.id)])
+
 
 class Rescue(models.Model):
     has_been_published = models.BooleanField(verbose_name=_("has been published"))
@@ -57,6 +70,9 @@ class Rescue(models.Model):
 
     def __str__(self):
         return self.description
+
+    def get_absolute_url(self):
+        return reverse('base_app:rescue_detail', args=[str(self.id)])
 
 
 class User(AbstractUser):
@@ -77,6 +93,9 @@ class RescueStation(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('base_app:rescue_station_detail', args=[str(self.id)])
 
 
 class Quote(models.Model):
@@ -103,7 +122,7 @@ class Art(models.Model):
     description = models.TextField(verbose_name=_("description"), null=True)
     editor_name = models.CharField(max_length=100, verbose_name=_("editor name"), null=True)
     name = models.CharField(max_length=100, verbose_name=_("name"))
-    img = models.ImageField(null=True,upload_to="art/images")
+    img = models.ImageField(null=True, upload_to="art/images")
 
     def __str__(self):
         return self.name

@@ -23,5 +23,9 @@ urlpatterns = [path('', views.index_view, name='index'),
                     name="rescuer_detail"),
                path('rescuer_list/', views.RescuerListView.as_view(), name="rescuer_list"),
 
-               path('search/', views.search_page, name="search")
+               path('search/', views.search_page, name="search"),
+
+               path('rescue_detail/<int:pk>/', views.RescueDetailView.as_view(), name="rescue_detail"),
+               path('rescue_list/', views.RescueListView.as_view(), name="rescue_list")
+
                ]
