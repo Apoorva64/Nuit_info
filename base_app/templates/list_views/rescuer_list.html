@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-success  table-striped">
+        <thead>
+        <tr>
+            <th>Rescuer</th>
+            <th>Last_Name</th>
+            <th>Description</th>
+            <th>Medal of Honor</th>
+            <th>Date de Naissance</th>
+            <th>Date de Mort</th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% if object_list %}
+
+                {% for rescuer in object_list %}
+                    <article>
+                    <td>
+                        <a class="text-decoration-none "
+                           href="{% url 'base_app:rescuer_detail' pk=rescuer.pk %} ">{{ rescuer.first_name }}</a>
+                    </td>
+                    <td>
+                        {{ rescuer.last_name }}
+                    </td>
+                    <td>
+                        {{ rescuer.description }}
+                    </td>
+                    <td>
+                        {{ rescuer.medals }}
+                    </td>
+                    <td>
+                        {{ rescuer.birth_date }}
+                    </td>
+                    <td>
+                        {{ rescuer.death_date }}
+                    </td>
+                    </article>
+                {% endfor %}
+
+        {% else %}
+            <p>There are no rescuer in the library.</p>
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
