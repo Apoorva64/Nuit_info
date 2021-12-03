@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-success  table-striped">
+    <thead>
+    <tr>
+      <th>Rescue Boat</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if object_list %}
+    <tr>
+        {% for rescue_boat in object_list %}
+            <td>
+            <a class="text-decoration-none "href="{% url 'base_app:rescue_boat_detail' pk=rescue_boat.pk  %} ">{{ rescue_boat.name }}</a>
+            </td>
+           <td>
+               {{ rescue_boat.name }}
+           </td>
+            <td>
+               {{ rescue_boat.start_date }}
+           </td>
+        {% endfor %}
+    </tr>
+   {% else %}
+        <p>There are no rescue boat in the library.</p>
+    {% endif %}
+  </tbody>
+    </table>
+{% endblock %}
