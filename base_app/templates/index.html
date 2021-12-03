@@ -3,12 +3,15 @@
 {% load i18n %}
 {% block header %}
     <script src={% static "js/traduction_listener.js" %}></script>
+    <script src={% static "js/game_easteregg.js" %} defer></script>
+    <link rel="stylesheet" type="text/css" href={% static "css/navbar.css" %}>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <p>index view</p>
-
+    <div class="">
+<canvas width="1200" height="480">
+  Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+</canvas>
         <p>{% trans 'translation test, translate this' %}</p>
         <p>{% trans 'try' %}</p>
     </div>

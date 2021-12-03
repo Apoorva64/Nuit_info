@@ -3,10 +3,17 @@
 {% block content %}
     <div style="text-align: center;">
         {% if search %}
-            <h1>You Searched for {{search}}</h1>
+            <h1>You Searched for {{ search }}</h1>
 
-            {% for result in results %}
-                {{ result }}
+            {% for result_cat in results %}
+                {% for result in result_cat %}
+                    <a href="{{ result.get_absolute_url }}">{{ result }}</a>
+                    {% if result.description %}
+                        : {{ result.description }}
+                    {% endif %}
+
+                {% endfor %}
+
             {% endfor %}
 
         {% else %}
